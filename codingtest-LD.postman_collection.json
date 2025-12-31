@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "00c67702-2c30-484b-8072-7a60d860249e",
+		"name": "codingtest-LD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51073372",
+		"_collection_link": "https://msm-shafkat-2568269.postman.co/workspace/Muhtasir-Shafkat's-Workspace~3e84b4e3-85ec-4116-8068-e3b6511ec615/collection/51073372-00c67702-2c30-484b-8072-7a60d860249e?action=share&source=collection_link&creator=51073372"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe 4\",\n    \"email\": \"john4@example.com\",\n    \"password\": \"secret1233\",\n    \"password_confirmation\": \"secret1233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"john3@example.com\",\n    \"password\": \"secret1233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shorten a URL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "m5cuOUE4hnNHkVatOIIDfnU3qd7xp3jAPNEZTMF7f680b5e",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"original_url\": \"https://www.netflix.com/bd/title/81068725\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/shorten",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"shorten"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
